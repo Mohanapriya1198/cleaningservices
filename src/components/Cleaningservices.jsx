@@ -1,19 +1,20 @@
 import React from "react";
-import "./Home.jsx";
 
 import "./Cleaningservices.css";
+import { Link } from "react-router-dom";
 
 import home from "../Images/home img.jpg";
 import about from "../Images/about img.jpg";
 import house from "../Images/house img.jpg";
-import furniture from "../Images/furniture img.jpg";
+import party from "../Images/party.jpg";
+import school from "../Images/school.jpg";
 import bathroom from "../Images/bathroom img.jpg";
 import address from "../Images/address.png";
 import phone from "../Images/phone.png";
 import mail from "../Images/mail.png";
 import wind from "../Images/window.jpg";
 
-const cleaningservices = () => {
+const Cleaningservices = () => {
   return (
     <div className="services">
       <div className="content">
@@ -23,30 +24,22 @@ const cleaningservices = () => {
             <div className="container">
               <div className="logo">
                 <a href="#">
-                  tolmol<span>Cleaning Services</span>
+                  al bahar al bayan<span>Building Cleaning Services</span>
                 </a>
               </div>
               {/* <button type="button" className="nav-toggle js-nav-toggler">
                 <span></span>
               </button> */}
               <nav className="nav js-nav">
-                <ul>
-                  <li>
-                    <a href="#home">home</a>
-                  </li>
+                <ul className="list">
+                  <li>home</li>
 
                   <li>
-                    <a href="#about">about</a>
+                    <Link to="/about">About</Link>
                   </li>
-                  <li>
-                    <a href="#services">services</a>
-                  </li>
-                  <li>
-                    <a href="#pricing">pricing</a>
-                  </li>
-                  <li>
-                    <a href="#contact">contact</a>
-                  </li>
+                  <li>services</li>
+                  <li>pricing</li>
+                  <li>contact</li>
                 </ul>
               </nav>
             </div>
@@ -74,7 +67,7 @@ const cleaningservices = () => {
           </section>
           {/*home section end*/}
           {/* about section start */}
-          <section className="about section-padding" id="about">
+          {/* <section className="about section-padding" id="about">
             <div className="container">
               <div className="grid">
                 <div className="about-img">
@@ -89,13 +82,13 @@ const cleaningservices = () => {
                 <div className="about-text">
                   <div className="section-title">
                     <span className="title">about us</span>
-                    <h2 className="sub-title">we're cleaning since 2020</h2>
+                    <h2 className="sub-title">we're cleaning services</h2>
                   </div>
                   <p>vhdgwhvdwhguwgyuegdyrgfyugryggrgr</p>
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
           {/* about section end */}
           {/* services section start */}
           <section className="services section-padding" id="services">
@@ -110,15 +103,15 @@ const cleaningservices = () => {
                   <div className="img-box">
                     <img src={bathroom} alt="img" />
                   </div>
-                  <h3>bathroom cleaning</h3>
+                  <h3>deep cleaning</h3>
                 </div>
                 {/* services item end */}
                 {/* services item start */}
                 <div className="services-item">
                   <div className="img-box">
-                    <img src={furniture} alt="img" />
+                    <img src={school} alt="img" />
                   </div>
-                  <h3>furniture cleaning</h3>
+                  <h3>schools & hospitals cleaning</h3>
                 </div>
                 {/* services item end */}
 
@@ -127,7 +120,7 @@ const cleaningservices = () => {
                   <div className="img-box">
                     <img src={house} alt="img" />
                   </div>
-                  <h3>house cleaning</h3>
+                  <h3>residental cleaning</h3>
                 </div>
                 {/* services item end */}
 
@@ -136,7 +129,15 @@ const cleaningservices = () => {
                   <div className="img-box">
                     <img src={wind} alt="img" />
                   </div>
-                  <h3>window cleaning</h3>
+                  <h3>office cleaning</h3>
+                </div>
+                {/* services item end */}
+                {/* services item start */}
+                <div className="services-item">
+                  <div className="img-box">
+                    <img src={party} alt="img" />
+                  </div>
+                  <h3>party help</h3>
                 </div>
                 {/* services item end */}
               </div>
@@ -150,7 +151,7 @@ const cleaningservices = () => {
                 <span className="title">pricing</span>
                 <h2 className="sub-title">our pricing plans</h2>
               </div>
-              <div className="grid">
+              <div className="grid ">
                 {/* basic plan start */}
                 <div className="pricing-item">
                   <div className="pricing-header">
@@ -161,10 +162,11 @@ const cleaningservices = () => {
                   </div>
                   <div className="pricing-body">
                     <ul>
-                      <li>house cleaning</li>
-                      <li>furniture cleaning</li>
-                      <li>bathroom cleaning</li>
-                      <li>window cleaning</li>
+                      <li>deep cleaning</li>
+                      <li>school & hospital cleaning</li>
+                      <li>residential cleaning</li>
+                      <li>office cleaning</li>
+                      <li>party help</li>
                     </ul>
                   </div>
                   <div className="pricing-footer">
@@ -184,10 +186,11 @@ const cleaningservices = () => {
                   </div>
                   <div className="pricing-body">
                     <ul>
-                      <li>house cleaning</li>
-                      <li>furniture cleaning</li>
-                      <li>bathroom cleaning</li>
-                      <li>window cleaning</li>
+                      <li>deep cleaning</li>
+                      <li>school & hospital cleaning</li>
+                      <li>residential cleaning</li>
+                      <li>office cleaning</li>
+                      <li>party help</li>
                     </ul>
                   </div>
                   <div className="pricing-footer">
@@ -207,10 +210,11 @@ const cleaningservices = () => {
                   </div>
                   <div className="pricing-body">
                     <ul>
-                      <li>house cleaning</li>
-                      <li>furniture cleaning</li>
-                      <li>bathroom cleaning</li>
-                      <li>window cleaning</li>
+                      <li>deep cleaning</li>
+                      <li>school & hospital cleaning</li>
+                      <li>residential cleaning</li>
+                      <li>office cleaning</li>
+                      <li>party help</li>
                     </ul>
                   </div>
                   <div className="pricing-footer">
@@ -236,17 +240,21 @@ const cleaningservices = () => {
                   <div className="contact-info-item">
                     <img src={address} alt="img" />
                     <h3>Address</h3>
-                    <p>Block-A, sec-75, Trichy road, Dindigul</p>
+                    <p>
+                      P.O.Box:62456, Shop No.12, Dasti Building 5,AI
+                      Karama,U.A.E.
+                    </p>
                   </div>
                   <div className="contact-info-item">
                     <img src={phone} alt="img" />
                     <h3>Call us</h3>
-                    <p>9654 2654 87</p>
+                    <p>050 460 0646</p>
+                    <p>052 376 2629</p>
                   </div>
                   <div className="contact-info-item">
                     <img src={mail} alt="img" />
                     <h3>Email us</h3>
-                    <p>info@gmail.com</p>
+                    <p>newemerald30@gmail.com</p>
                   </div>
                 </div>
                 <div className="contact-form">
@@ -305,4 +313,4 @@ const cleaningservices = () => {
   );
 };
 
-export default cleaningservices;
+export default Cleaningservices;

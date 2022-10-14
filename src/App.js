@@ -1,15 +1,23 @@
+import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Cleaningservices from "./components/Cleaningservices";
-import Home from "./components/Home";
+import About from "./components/About";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 function App() {
   return (
     <>
       <Router>
-        <Cleaningservices />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" component={Cleaningservices} />
+          <Route exact path="/about" component={About} />
+          <Navigate to="/" />
         </Routes>
       </Router>
     </>
